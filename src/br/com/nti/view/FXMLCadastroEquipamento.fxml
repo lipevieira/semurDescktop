@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.nti.controller.FXMLCadastroEquipamentoController">
+    <children>
+        <SplitPane dividerPositions="0.9086859688195991" orientation="VERTICAL" prefHeight="900.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="813.0" prefWidth="1798.0" style="-fx-background-color: #2273b7;">
+                    <children>
+                        <TableView id="tbl_equipamento" fx:id="tableViewEquipamento" layoutY="135.0" prefHeight="680.0" prefWidth="1798.0" stylesheets="@../css/FXMLCadastroEquipamento.css" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="135.0">
+                            <columns>
+                        <TableColumn fx:id="tableColumnEQuipamentoSelecinar" prefWidth="25.999969482421875" />
+                        <TableColumn fx:id="tableColumnEQuipamentoId" prefWidth="52.0" styleClass="coluna-id" text="ID" />
+                        <TableColumn fx:id="tableColumnEQuipamentoLocal" prefWidth="173.0" styleClass="coluna-local" text="LOCAL" />
+                                <TableColumn fx:id="tableColumnEQuipamentoSetor" prefWidth="153.00003051757812" styleClass="coluna-setor" text="SETOR" />
+                                <TableColumn fx:id="tableColumnEQuipamentoUsuario" prefWidth="109.0" styleClass="coluna-usuario" text="USUÁRIO" />
+                                <TableColumn fx:id="tableColumnEQuipamentoEquipamento" prefWidth="128.0" styleClass="coluna-equipamento" text="EQUIPAMENTO" />
+                                <TableColumn fx:id="tableColumnEQuipamentoDescricao" prefWidth="153.0" styleClass="coluna-descricao" text="DESCRIÇÃO" />
+                                <TableColumn fx:id="tableColumnEQuipamentoSerial" minWidth="2.0" prefWidth="149.0" styleClass="coluna-serial" text="SERIAL" />
+                                <TableColumn fx:id="tableColumnEQuipamentoTombo" prefWidth="121.0" styleClass="coluna-tombo" text="TOMBO" />
+                                <TableColumn fx:id="tableColumnEQuipamentoFornecedor" prefWidth="131.0" styleClass="coluna-fornecedor" text="FORNECEDOR" />
+                                <TableColumn fx:id="tableColumnEQuipamentoMarca" prefWidth="124.0" styleClass="coluna-marca" text="MARCA" />
+                                <TableColumn fx:id="tableColumnEQuipamentoComputador" prefWidth="129.0" styleClass="coluna-computador" text="ENDEREÇO / IP" />
+                        <TableColumn fx:id="tableColumnEQuipamentoObservacoes" maxWidth="621.0" prefWidth="492.0" styleClass="coluna-observacoes" text="OBSERVAÇÃO" />
+                            </columns>
+                        </TableView>
+                  <TextField fx:id="txt_pesquisar" layoutY="92.0" prefHeight="35.0" prefWidth="241.0" promptText="Pesquisar ">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></TextField>
+                  <Pane layoutX="357.0" prefHeight="127.0" prefWidth="1442.0" style="-fx-border-color: #2273b7; -fx-background-color: #2273b7;">
+                     <children>
+                        <Label layoutX="14.0" prefHeight="73.0" prefWidth="1042.0" text="Sistema de Controle de equipamentos -NTI" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="64.0" text="Total de Equipamentos: " textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalEquipamentos" layoutX="445.0" layoutY="64.0" prefHeight="58.0" prefWidth="108.0" textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="139.0" fitWidth="283.0" layoutX="1079.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../fotos/SaidaEquipamento.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btn_atualizarTabela" layoutX="252.0" layoutY="92.0" mnemonicParsing="false" onAction="#carregarTableViewEQuipamento" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #A9A9A9;" text="Atualizar ">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="35.0" fitWidth="64.0" layoutX="206.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../fotos/icons8-pesquisar-50.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="52.0" prefWidth="1798.0" style="-fx-background-color: #2273b7;">
+                    <children>
+                        <Button fx:id="btn_incluir" layoutX="1494.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #32CD32;" text="Incluir" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <Button fx:id="btn_alterar" layoutX="1595.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #FFD700;" text="Alterar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                        <Button fx:id="btn_deletar" layoutX="1695.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #B22222;" text="Excluir" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="FXMLCadastroEquipamentoController" layoutX="1370.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleButtonEmpresta" prefHeight="35.0" prefWidth="108.0" style="-fx-background-color: #FFFFFF;" text="Empresta " textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_relatorio_equipamento" layoutX="1237.0" layoutY="7.0" mnemonicParsing="false" onAction="#chamaTelaRelatorio" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: #00BFFF;" text="Relatório" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAbrirOCS" layoutX="1140.0" layoutY="7.0" mnemonicParsing="false" onAction="#chamarTelaOcs" prefHeight="35.0" text="Abrir OCS">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

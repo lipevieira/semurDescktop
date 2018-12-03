@@ -1,0 +1,77 @@
+.table-view .table-cell.coluna-id{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell.coluna-serial{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+.table-view .table-cell.coluna-setor{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell.coluna-equipamento{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell.coluna-destino{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell.coluna-nome{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell.coluna-dataDevolcao{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+.table-view .table-cell.coluna-dataSaida{ /* Célula da coluna Data */ 
+    -fx-alignment: center;
+}
+
+.table-view .table-cell{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+}
+
+
+.table-view .table-cell{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color,  #C0C0C0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #277ec6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.label{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 16;  
+    -fx-font-weight: bold;
+}
+
+.text-field{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 16;        
+}
+
+.button{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 16;    
+    -fx-font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+

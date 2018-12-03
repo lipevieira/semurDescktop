@@ -1,0 +1,23 @@
+
+.label{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 14;    
+}
+
+.text-field{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 14;         
+
+}
+
+.button{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 14;    
+    -fx-font-weight: bold;
+
+}
+.text-area{
+    -fx-font-family: "times new roman", Gerogia, Serif;
+    -fx-font-size: 14;     
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="249.0" prefWidth="594.0" style="-fx-background-color: #C0C0C0;" stylesheets="@../css/GerarRelatorio.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.nti.controller.GerarRelatorioController">
+   <children>
+      <Label layoutX="242.0" layoutY="32.0" prefHeight="30.0" prefWidth="116.0" text="RELATÓRIOS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRelatorio" layoutX="41.0" layoutY="78.0" prefHeight="30.0" prefWidth="518.0" promptText="INFORME UM CONTEUDO DA TABELA" />
+      <ComboBox fx:id="cbGerarRelatorio" layoutX="349.0" layoutY="123.0" prefHeight="30.0" prefWidth="210.0" promptText="ESCOLHER RELATÓRIO" />
+      <Button fx:id="btnConfirmaRelatorio" layoutX="349.0" layoutY="163.0" mnemonicParsing="false" onAction="#gerarRelatorio" prefHeight="30.0" prefWidth="210.0" text="CONFIRMA RELATÓRIO" />
+      <Button fx:id="btnGerarRelatorioGeral" layoutX="349.0" layoutY="205.0" mnemonicParsing="false" onAction="#gerarRelatorioCompleto" prefHeight="30.0" prefWidth="210.0" text="RELATÓRIO GERAL" />
+   </children>
+</AnchorPane>

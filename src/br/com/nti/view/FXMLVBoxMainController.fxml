@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #2273b7;" stylesheets="@../css/FXMLVBoxMainController.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.nti.controller.FXMLVBoxMainController">
+   <children>
+      <MenuBar layoutX="1280.0" layoutY="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="EQUIPAMENTOS">
+            <items>
+              <MenuItem fx:id="chamarMenuItemCadastroEquipamento" mnemonicParsing="false" onAction="#chamarMenuItemCadastroEquipamento" text="Equipamentos no Sistema" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="EMPRESTIMOS">
+            <items>
+                  <MenuItem fx:id="menuItemConsultar" mnemonicParsing="false" onAction="#chamarMenuItemCadastroEmprestimo" text="Equipamentos Emprestados" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="ABRIR OCS">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#chamarMenuItemOCS" text="Abrir OCS" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <Label layoutX="635.0" layoutY="176.0" text="CONTROLE DE EQUIPAMENTOS " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="294.0" fitWidth="488.0" layoutX="656.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../fotos/semur-prefeitura-2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="678.0" layoutY="273.0" text="Núcleo de Tecnologia da Informação">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</VBox>

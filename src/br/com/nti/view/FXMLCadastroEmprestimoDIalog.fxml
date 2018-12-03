@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="505.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.nti.controller.FXMLCadastroEmprestimoController">
+   <children>
+      <GridPane layoutX="25.0" layoutY="61.0" prefHeight="341.0" prefWidth="446.0" stylesheets="@../css/FXMLCadastroEmprestimoDIalog.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="114.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="582.0" minWidth="10.0" prefWidth="333.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Serial:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Setor:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Equipamento:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Destino:" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextFildEmprestimoSerial" prefHeight="28.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFildEmprestimoSetor" prefHeight="28.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="TextFildEmprestimoEquipamento" prefHeight="28.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="TextFildEmprestimoDestino" prefHeight="28.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Nome:" GridPane.rowIndex="6" />
+            <TextField fx:id="TextFildEmprestimoNome" prefHeight="28.0" prefWidth="517.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Codico:" />
+            <TextField fx:id="TextFildEmprestimoId" prefHeight="28.0" prefWidth="538.0" GridPane.columnIndex="1" />
+            <Label text="Tombo" GridPane.rowIndex="4" />
+            <TextField fx:id="TextFildEmprestimoTombo" prefHeight="28.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Telefone:" GridPane.rowIndex="7" />
+            <TextField fx:id="TextFildEmprestimoTelefone" onKeyReleased="#mascaraCelula" prefHeight="26.0" prefWidth="174.0" promptText="Informe apenas numeros" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Data de Saida" GridPane.rowIndex="8" />
+            <DatePicker fx:id="DatePickerEmprestimoDataSaida" prefHeight="26.0" prefWidth="332.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Data da Devolução:" GridPane.rowIndex="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="DatePickerEmprestimoDataEntrega" prefHeight="26.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="TextAreaDescricao" layoutX="138.0" layoutY="429.0" prefHeight="98.0" prefWidth="333.0" wrapText="true" />
+      <Label layoutX="139.0" layoutY="413.0" text="Descriminação / Oberservação">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_cancelar" layoutX="194.0" layoutY="535.0" mnemonicParsing="false" onAction="#botaoCancelarEmprestimo" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: #B22222;" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_salvar" layoutX="298.0" layoutY="535.0" mnemonicParsing="false" onAction="#salvarEmprestimo" prefHeight="30.0" prefWidth="171.0" style="-fx-background-color: #32CD32;" text="Confirmar Emprestimo" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="165.0" layoutY="30.0" text="REGISTRO DE EMPRESTIMO">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+     
+  
+      
+   </children>
+</AnchorPane>
